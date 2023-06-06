@@ -1,0 +1,23 @@
+{
+  "appPageId" : "a577f86f-a440-429b-8038-160364b2bca4",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "43d80e6e-85bd-4374-8b12-f0daa3f787ae",
+  "label" : "User List",
+  "regions" : [ {
+    "id" : "64fcbdeb-98d3-4d57-8774-56386d18e4ea",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "cca533b3-0dbd-4690-81b3-e4fcf83278bd",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "e1f37b73-e0df-4178-a97e-5c79757e2586",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-005"
+}
