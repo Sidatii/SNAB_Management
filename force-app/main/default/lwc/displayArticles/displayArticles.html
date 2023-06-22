@@ -1,8 +1,10 @@
 <template>
     <lightning-card title="Articles" icon-name="standard:article">
-                <template for:each={wiredArticles.data} for:item="art">
-                     <p key={art.id}>
-                          test
+     <button onclick={handleClick} class="slds-button">Button</button>
+                <template for:each={wiredArticles.data} for:item="art"> 
+                    <p key={art.id}>
+                          {art.Question__c}
+                          {art.Answer__c}
                      </p>
                 </template>
     </lightning-card>

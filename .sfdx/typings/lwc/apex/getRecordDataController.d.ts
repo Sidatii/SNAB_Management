@@ -1,3 +1,3 @@
-declare module "@salesforce/apex/getRecordDataController.getAcounts" {
-  export default function getAcounts(): Promise<any>;
+declare module "@salesforce/apex/getRecordDataController.getAccounts" {
+  export default function getAccounts(): Promise<any>;
 }
