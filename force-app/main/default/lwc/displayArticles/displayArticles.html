@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Articles" icon-name="standard:article">
+        <div class="slds-m-around_medium">
+            <template if:true={articles.data}>
+                <template for:each={articles.data} for:item="article">
+                    <p key={article.Id}>{article.Title__c}</p>
+                </template>
+            </template>
+            <template if:true={articles.error}>
+                <c-error-panel errors={articles.error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+</template>
