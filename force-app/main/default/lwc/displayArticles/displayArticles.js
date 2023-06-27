@@ -5,7 +5,7 @@ export default class DisplayArticles extends LightningElement {
 
     @wire (getArticles) wiredArticles;
     handleClick(){
-        console.log(this.wiredArticles.data);
+        console.log(this.wiredArticles);
     }
 }
 

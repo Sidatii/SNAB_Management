@@ -2,10 +2,28 @@
     <lightning-card title="Articles" icon-name="standard:article">
      <button onclick={handleClick} class="slds-button">Button</button>
                 <template for:each={wiredArticles.data} for:item="art"> 
-                    <p key={art.id}>
-                          {art.Question__c}
-                          {art.Answer__c}
+                     <div key={art.article.id} class="slds-grid" >
+                    <p>
+                         title : {art.article.Title}
+                         <br>
+                          {art.article.Question__c}
+                          {art.article.Answer__c}
                      </p>
+                         <div class="slds-col slds-size_8-of-12">
+                             <img src={art.filesData} height="100" width="100">
+                         </div>
+
+
+                         <!--  -->
+                         <div class="card">
+                              <img src={art.filesData} class="card__image slds-size_8-of-12" alt="brown couch" />
+                              <div class="card__content">
+                                <time datetime="2021-03-30" class="card__date">30 März 2021</time>
+                                <span class="card__title">Duis autem vel eum iriure dolor in hend in vulputate</span>
+                              </div>
+                            </div>
+                         <!--  -->
+                     </div>
                 </template>
     </lightning-card>
 </template>
