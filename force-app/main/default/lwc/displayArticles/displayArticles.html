@@ -1,26 +1,24 @@
 <template>
-    <lightning-card title="Articles" icon-name="standard:article">
+    <div class="bg">
      <button onclick={handleClick} class="slds-button">Button</button>
                 <template for:each={wiredArticles.data} for:item="art"> 
                      <div key={art.article.id} class="slds-grid" >
-                  
-
-
-                         <!--  -->
-                         <div class="card test">
-                              <img src={art.filesData} class="card__image slds-size_8-of-12" alt="brown couch" />
+                         <div class="card">
+                              <img src={art.filesData} class="card__image" alt="brown couch" />
                               <div class="card__content">
                                 <time datetime="2021-03-30" class="card__date">30 März 2021</time>
-                                <span class="card__title">
-                                   {art.article.Question__c}
-                                   {art.article.Answer__c}
+                                <span class="card__title">   
+                                   {art.article.Body__c}
+                                   
                               </span>
                               </div>
                             </div>
-                         <!--  -->
+
+
+                    
                      </div>
                 </template>
-    </lightning-card>
+               </div>
 </template>
 
 
