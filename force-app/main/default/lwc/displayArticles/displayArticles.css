@@ -1,5 +1,3 @@
-
-
 body {
   display: flex;
   justify-content: center;
@@ -9,10 +7,14 @@ body {
   padding: 0;
   margin: 0;
 }
+.second{
+  display: flex;
+  direction: row;
+}
 .bg {
   background-color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 * {
   -webkit-font-smoothing: antialiased;
@@ -34,7 +36,7 @@ body {
   box-sizing: border-box;
   margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   
   @include mediaBig {
     flex-direction: row;
@@ -45,31 +47,34 @@ body {
 }
 
 .card__image {
-  width: 100%;
-  max-height: 300px;
+  
   border-radius: var(--border-radius-primary);
   object-fit: cover;
-  margin-bottom: 18px;
   
-  @include mediaBig {
-    width: 45%;
-    max-height: none;
-    min-height: 400px;
-    margin-bottom: 0;
-  }
 }
-
+.image_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  
+}
 .card__content {
-  @include mediaBig {
-    width: 55%;
-    padding-left: 40px;
-  }
+  
+  margin: 10 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 40px;
+  min-height: 250px;
 }
 
-.card__date {
+.card__title {
   display: block;
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-caption);
+  font-size: 20px;
   line-height: var(--line-height-caption);
   text-transform: uppercase;
   color: var(--color-text);
