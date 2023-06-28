@@ -6,7 +6,7 @@ export default class DisplayArticles extends LightningElement {
     @wire (getArticles) wiredArticles;
     handleClick(){
         // redirect to the article page
-        console.log('clicked');
+        console.log(this.wiredArticles);
 
     }
     // filter data based on search
