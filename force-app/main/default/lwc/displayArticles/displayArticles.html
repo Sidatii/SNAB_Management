@@ -17,23 +17,43 @@
           </lightning-layout>
           <lightning-button-icon icon-name="utility:read" variant="bare" alternative-text="Read" onclick={handleClick}
                class="slds-m-left_x-small slds-button slds-button_brand">Read</lightning-button-icon>
-          <template for:each={wiredArticles.data} for:item="art">
-               <div key={art.article.id} class>
-                    <div class="card">
-                         <div class="image_container">
-                              <img src={art.filesData} class="card__image" alt="image" />
-                         </div>
-                         <div class="card__content">
-                              <time datetime="2021-03-30" class="card__title">{art.article.Title}</time>
-                              <span class="card__title">
-                                   <!-- display the first 100 characters of the article body -->
-                                   {art.article.Body__c}...
+          <div class="grid-container" >
+               
+                    <template for:each={wiredArticles.data} for:item="art">
+                         <div key={art.article.id} class="grid-item">
+                              <div class="card-wrapper">
+                                   <div class="card">
+                                        <div class="image-wrapper">
+                                             <a class="image-link" href="">
+                                                  <img src={art.filesData} />
+                                             </a>
+                                        </div>
+                                        <div class="">
+                                             <div class="text-box-wrapper">
+                                                  <div class="text-box">
+                                                       <h1 class="heading">
+                                                            {art.article.Title}
+                                                       </h1>
 
-                              </span>
-                         </div>
-                    </div>
+                                                       <p class="text">
+                                                            {art.article.Body__c}
+                                                       </p>
+                                                  </div>
+                                             </div>
 
-               </div>
-          </template>
+                                             <div class="button-wrapper">
+                                                  <a class="button" href="">
+                                                       Read More
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </template>
+               
+          </div>
+
      </div>
 </template>
