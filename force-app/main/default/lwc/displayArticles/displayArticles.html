@@ -3,27 +3,25 @@
           <lightning-layout multiple-rows="true" vertical-align="end">
                <lightning-layout-item size="4" padding="around-small">
                     <!--Input text to Search Account-->
-                    <lightning-input type="text" label="Search article"
-                         placeholder="Search article"
-                         value={searchKey}
+                    <lightning-input type="text" label="Search article" placeholder="Search article" value={searchKey}
                          onchange={handelSearchKey}>
                     </lightning-input>
                </lightning-layout-item>
 
                <lightning-layout-item size="2" padding="around-small">
                     <!--Search Button-->
-                    <lightning-button label="Search" variant="brand"
-                         onclick={SearchArticlesHandler}>
+                    <lightning-button label="Search" variant="brand" onclick={SearchArticlesHandler}>
 
                     </lightning-button>
                </lightning-layout-item>
           </lightning-layout>
+          <lightning-button-icon icon-name="utility:read" variant="bare" alternative-text="Read" onclick={handleClick}
+               class="slds-m-left_x-small slds-button slds-button_brand">Read</lightning-button-icon>
           <template for:each={wiredArticles.data} for:item="art">
                <div key={art.article.id} class>
                     <div class="card">
                          <div class="image_container">
-                              <img src={art.filesData} class="card__image"
-                                   alt="image" />
+                              <img src={art.filesData} class="card__image" alt="image" />
                          </div>
                          <div class="card__content">
                               <time datetime="2021-03-30" class="card__title">{art.article.Title}</time>
@@ -34,10 +32,6 @@
                               </span>
                          </div>
                     </div>
-                    <lightning-button-icon icon-name="utility:read"
-                         variant="bare" alternative-text="Read"
-                         onclick={handleClick}
-                         class="slds-m-left_x-small slds-button slds-button_brand">Read</lightning-button-icon>
 
                </div>
           </template>
